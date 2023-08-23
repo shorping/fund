@@ -5,15 +5,21 @@ const routers: any = [
     { path: '/', redirect: '/home' },
     // 登录
     {
-        path: '/login',
         name: 'Login',
+        path: '/login',
         component: () => import('@/login/index.vue')
     },
     // 首页
     {
-        path: '/home',
         name: 'Home',
+        path: '/home',
         component: () => import('@/home/index.vue')
+    },
+    // 详情页
+    {
+        name: 'Company',
+        path: '/company/:id',
+        component: () => import('@/company/index.vue')
     }
 ];
 

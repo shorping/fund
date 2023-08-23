@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4104938 */
+  src: url('iconfont.woff2?t=1687742653582') format('woff2'),
+       url('iconfont.woff?t=1687742653582') format('woff'),
+       url('iconfont.ttf?t=1687742653582') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e664";
+}
+
+.icon-cuowuguanbiquxiao:before {
+  content: "\e8e7";
+}
+
+.icon-ditu-tuding:before {
+  content: "\ec41";
+}
+
+.icon-dianzan_kuai:before {
+  content: "\ec8c";
+}
+
+.icon-shoucang1:before {
+  content: "\e8c6";
+}
+
+.icon-cai1:before {
+  content: "\e69f";
+}
+
+.icon-tuding1:before {
+  content: "\e7a5";
+}
+
+.icon-tuichu:before {
+  content: "\e600";
+}
+
+.icon-dianzan:before {
+  content: "\e601";
+}
+
+.icon-shoucang:before {
+  content: "\e602";
+}
+
+.icon-xiala:before {
+  content: "\e6b9";
+}
+
+.icon-cai:before {
+  content: "\e62d";
+}
+
+.icon-shanchu:before {
+  content: "\e8b6";
+}
+
+.icon-sousuo:before {
+  content: "\e603";
+}
+
+.icon-tuding:before {
+  content: "\ed20";
+}
+

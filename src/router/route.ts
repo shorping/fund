@@ -15,8 +15,7 @@ const router = createRouter({
 // 前置首位
 router.beforeEach((_to, _from, next) => {
     const store = useUserStore();
-    if (store.userInfo.id == undefined && _to.path != '/login') {
-        console.log(_from.path);
+    if (store.userInfo?.id == null && _to.path != '/login') {
 
         next({ path: '/login' });
     } else {

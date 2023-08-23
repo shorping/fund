@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import type { FormRules } from 'element-plus/lib/components/form/index.js';
+import 'element-plus/es/components/message/style/css';
 import { ElMessage } from 'element-plus';
-
-
+import { useRouter } from "vue-router";
 import { reactive, ref, triggerRef } from 'vue'
+import { useUserStore } from "@/store/modules/user";
+
+// 路由
+const router = useRouter();
+
+// 是否处于loading状态
+const loading = ref(false)
+
+// 用户存储
+const userInfo = useUserStore()
 
 // 表单数据
 const form = reactive({
@@ -29,7 +39,7 @@ const fromRules = reactive<FormRules>({
     ]
 })
 
-const loading = ref(false)
+
 
 const onSubmit = async () => {
     if (form.email != '123@163.com' || form.password != '123456') {
@@ -40,7 +50,13 @@ const onSubmit = async () => {
         return;
     }
     loading.value = true;
-    setTimeout(() => { loading.value = false; }, 2000);
+    setTimeout(() => {
+        loading.value = false;
+        userInfo.createUserInfo();
+        router.push({
+            path: '/home'
+        })
+    }, 2000);
 
 
 }

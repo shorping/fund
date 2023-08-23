@@ -4,7 +4,8 @@ import ElementPlus from 'element-plus';
 // pinia
 import store from '@/store/index';
 // 全局样式
-import './global_style.css'
+import '@/style/global_style.css'
+import '@/assets/font/font.css'
 // 主文件
 import App from './App.vue'
 // 路由
